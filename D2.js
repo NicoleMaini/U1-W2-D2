@@ -2,8 +2,9 @@
   Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
 
-{let num1 = 8;
-let num2 = 6;
+{
+  let num1 = 8;
+let num2 = 6; 
 
 let largeNum = num1 > num2 ? `${num1} è maggiore di ${num2}`: `${num2} è maggiore di ${num1}`;
 console.log(largeNum);
@@ -69,7 +70,7 @@ console.log("Nessun numero è uguale a 8 o da come risulta di somma o sottrazion
 */
 
 {
-let totalShoppingCart = 31;
+let totalShoppingCart = 21;
 let shoppingFees = 10;
 let totalShopping;
 
@@ -81,26 +82,26 @@ if(totalShoppingCart > 50){
 };
 }
 
-/* ESERCIZIO 6 ------
+/* ESERCIZIO 6 
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 {
-let totalShoppingCart = 31;
+let totalShoppingCart = 35;
 let shoppingFees = 10;
 const discount = 20;
-let discountShopping; 
+let discountShopping = (totalShoppingCart * discount) / 100; 
+let discountShoppingTotal = totalShoppingCart - discountShopping ;
 let totalShopping;
 
-console.log();
-
-if(totalShopping > 50){
-  totalShopping = totalShoppingCart ;
-  console.log(`Congratilazion! Hai ottenuto la spedizione gratis! Il tuo totale carrello è: ${totalShopping}`);
-} else { totalShopping = totalShoppingCart + shoppingFees;
+if(discountShoppingTotal > 50){
+  totalShopping = discountShoppingTotal ;
+  console.log(`Congratilazion! Hai ottenuto la spedizione gratis! Il tuo totale carrello è: ${discountShoppingTotal}`);
+} else { totalShopping = discountShoppingTotal + shoppingFees;
   console.log(`Il tuo totale carrello è: ${totalShopping}`);
 };
 }
+
 /* ESERCIZIO 7 -----
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
