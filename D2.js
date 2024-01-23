@@ -87,7 +87,7 @@ if(totalShoppingCart > 50){
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 {
-let totalShoppingCart = 35;
+let totalShoppingCart = 95;
 let shoppingFees = 10;
 const discount = 20;
 let discountShopping = (totalShoppingCart * discount) / 100; 
@@ -107,30 +107,31 @@ if(discountShoppingTotal > 50){
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
   Alla fine mostra il risultato in console.
 */
+{
+let num8 = 0;
+let num9 = 7;
+let num10 = 6;
 
-/*let num8 = 1;
-let num9 = 45;
-let num10 = 3;
-
-if(num8 > num9 > num10){
+if(num8 > num9 && num9 > num10){
   console.log(`Questa è l'ordine: ${num8}, ${num9}, ${num10}`);
-} else if(num9 > num10 > num8){
-  console.log(`Questa è l'ordine: ${num9}, ${num10}, ${num8}`);
-} else if(num10 > num8 > num9){
-  console.log(`Questa è l'ordine: ${num10}, ${num8}, ${num9}`);
-} else if(num9 > num8 > num10){
-  console.log(`Questa è l'ordine: ${num9}, ${num8}, ${num10}`);
-} else if(num10 > num9 > num8){
+} else if(num10 > num9 && num9 > num8){
   console.log(`Questa è l'ordine: ${num10}, ${num9}, ${num8}`);
-} else if(num8 > num10 > num9){
-  console.log(`Questa è l'ordine: ${num8}, ${num9}, ${num10}`);
-} else {console.log(`Questa è l'ordine: ${num10}, ${num9}, ${num8}`)}*/
+} else if(num8 > num10 && num10 > num9){
+  console.log(`Questa è l'ordine: ${num8}, ${num10}, ${num9}`);
+} else if(num9 > num10 && num10 > num8){
+  console.log(`Questa è l'ordine: ${num9}, ${num10}, ${num8}`);
+} else if(num9 > num8 && num8 > num10){
+  console.log(`Questa è l'ordine: ${num9}, ${num8}, ${num10}`);
+} else {
+  console.log(`Questa è l'ordine: ${num10}, ${num8}, ${num9}`);
 
+}
+}
 /* ESERCIZIO 8 ------
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
-/*
-{
+
+/*{
   let num11 = "10";
 
 if(typeof num11 === ) {
