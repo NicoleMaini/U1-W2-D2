@@ -11,8 +11,10 @@ console.log(largeNum);
 
 if(num1 > num2) {
   console.log(`${num1} è maggiore di ${num2}`);
-} else {
+} else if(num2 > num1){
   console.log(`${num2} è maggiore di ${num1}`);
+} else{
+  console.log(`${num2} sono uguale ${num1}`)
 }; 
 }
 
@@ -61,6 +63,17 @@ if(num6 === 8){
 } else {
 console.log("Nessun numero è uguale a 8 o da come risulta di somma o sottrazione 8");
 };
+
+// un altro modo per farlo più sbrigativo ma meno articolato.
+
+if (num6 === 8 || num7 === 8){
+console.log("Uno di questi numeri è 8");
+} else if (num6 + mun7 || num6 - num7 || num7 - num6){
+  console.log("Le loro addizione/sottrazione da 8 come risultato");
+} else {
+  console.log("Nessun numero è 8 o addizionato/sottratto da come risultato 8");
+};
+
 }
 
 /* ESERCIZIO 5
@@ -102,7 +115,7 @@ if(discountShoppingTotal > 50){
 };
 }
 
-/* ESERCIZIO 7 -----
+/* ESERCIZIO 7 
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
   Alla fine mostra il risultato in console.
@@ -131,17 +144,14 @@ if(num8 > num9 && num9 > num10){
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 
-/*{
-  let num11 = "10";
+let num11 = "10";
 
-if(typeof num11 === ) {
-  console.log("è un numero");
-} else {
-  console.log("non è un numero");
-}
+if(typeof num11 === "number"){
+console.log("Questo è un numero");
+} else {"Questo non è un numero"}
 
 console.log(typeof num11);
-}*/
+
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
@@ -166,6 +176,16 @@ if (val > 5 && val < 10) {
     console.log("Meno di 10");
   } else if (val < 5) {
     console.log("Meno di 5");
+  } else {
+    console.log("Uguale a 10 o maggiore");
+  };
+
+ // correzione (sfruttare la logica di js, ovvero il suo leggere dall'alto in basso)
+
+if (val < 5) {
+    console.log("Meno di 5");
+  } else if (val < 10) {
+    console.log("Meno di 10");
   } else {
     console.log("Uguale a 10 o maggiore");
   };
@@ -215,6 +235,20 @@ arr.splice(8, 0, 9 );
 arr.splice(9, 0, 10 );
 console.log(arr);
 
+// correction
+
+let arr2 = [];
+arr2.push(1);
+arr2.push(2);
+arr2.push(3);
+arr2.push(4);
+arr2.push(5);
+arr2.push(6);
+arr2.push(7);
+arr2.push(8);
+arr2.push(9);
+arr2.push(10);
+console.log(arr2);
 
 /* ESERCIZIO 15
 Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
